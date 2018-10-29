@@ -1,0 +1,980 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  #back {
+    width: 100%;
+    height: 100%;
+    background-image: url('rest1.jpg');
+    background-size: cover;
+  }
+  
+  #overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75)
+  }
+  
+  #nav {
+    width: 100%;
+    height: 12%;
+    background-color: #ffeaa7;
+    display: flex;
+  }
+  
+  #logo {
+    width: 30%;
+    height: 100%;
+    background-color: #ffeaa7;
+  }
+  
+  #logo h1 {
+    font-size: 29px;
+    margin: 15px 0 8px 30px;
+    color: #eb2f06;
+    font-family: 'Rosario', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  #logo p {
+    font-size: 12px;
+    margin-left: 105px;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: .5px;
+  }
+  
+  #nav1 {
+    width: 70%;
+    height: 100%;
+    background-color: #ffeaa7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #nav1 a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #hamburger {
+    width: 10%;
+    height: 100%;
+    background-color: orange;
+    display: none;
+    position: relative;
+  }
+  
+  .container {
+    position: absolute;
+    top: 29%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30px;
+    cursor: pointer;
+    z-index: 4000;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 27px;
+    height: 2px;
+    background-color: rgb(5, 5, 5);
+    transition: all ease-in-out .4s;
+  }
+  
+  .changew {
+    transform: translate(380px, 0px);
+  }
+  
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 7px);
+    background-color: #eb2f06;
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+    background-color: #eb2f06;
+  }
+  
+  #patti {
+    position: absolute;
+    background-color: #ffeaa7;
+    width: 100%;
+    height: 50%;
+    display: none;
+    z-index: 2;
+  }
+  
+  #nav2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #nav2 a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #center {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #boy {
+    width: 100%;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #boy img {
+    width: 90px;
+    height: 95px;
+  }
+  
+  #popup {
+    width: 45%;
+    height: 44%;
+    background-color: #ffeaa7;
+    position: absolute;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    display: none;
+  }
+  
+  #popup h6 {
+    margin-top: 70px;
+  }
+  
+  #popup h1 {
+    font-size: 29px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+  
+  #popup p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  #cross {
+    background-color: #eb2f06;
+    color: #fff;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: -3.2%;
+    top: -4.6%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    font-weight: 500;
+  }
+  
+  #book {
+    width: 400px;
+    min-height: 60vh;
+  }
+  
+  .center {
+    text-align: center;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  #welcome {
+    margin-top: 35px;
+    font-size: 42px;
+  }
+  
+  #raja {
+    font-size: 44px;
+    letter-spacing: 3px;
+    margin-top: -5px;
+    color: #eb2f06;
+    font-family: 'Rosario', sans-serif;
+  }
+  
+  #veg {
+    color: rgb(34, 219, 28);
+    margin-left: 220px;
+  }
+  
+  #time {
+    margin-top: 5px;
+  }
+  
+  #open {
+    font-size: 22px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+  }
+  
+  #closed {
+    margin-top: 35px;
+    font-size: 18px;
+  }
+  
+  #button {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .button {
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  #but1 {
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    color: #fff;
+    letter-spacing: .5px;
+    transition: all ease-in-out .2s;
+  }
+  
+  #but1:hover {
+    background-color: black;
+    color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  #but2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    letter-spacing: .5px;
+    font-weight: 400;
+    transition: all ease-in-out .2s;
+  }
+  
+  #but2:hover {
+    background-color: black;
+    color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  #back2 {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #ffeaa7;
+  }
+  
+  #menuicon {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url('../images/enu3.png');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #menuicon h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 10px;
+  }
+  
+  #menulist {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #food {
+    width: 380px;
+    height: 480px;
+    background-color: rgb(255, 255, 255);
+    transition: all ease-in-out .3s;
+    overflow: auto;
+  }
+  
+  #food::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  #food::-webkit-scrollbar-thumb {
+    background-color: #DC2A06;
+    border-radius: 10px;
+  }
+  
+  #food hr {
+    width: 265px;
+    display: flex;
+    margin: 20px 0 0 50px;
+    border-style: dashed;
+  }
+  
+  #food h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #food:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  #list1 {
+    width: 100%;
+    height: 250%;
+    overflow: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .items {
+    width: 90%;
+    height: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .items h3 {
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .items p {
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #drink {
+    width: 380px;
+    height: 480px;
+    background-color: rgb(255, 255, 255);
+    transition: all ease-in-out .3s;
+    overflow: auto;
+  }
+  
+  #drink::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  #drink::-webkit-scrollbar-thumb {
+    background-color: #DC2A06;
+    border-radius: 10px;
+  }
+  
+  #drink hr {
+    width: 265px;
+    display: flex;
+    margin: 20px 0 0 50px;
+    border-style: dashed;
+  }
+  
+  #drink h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #drink:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  #back3 {
+    width: 100%;
+    height: 110%;
+    background-color: #ffe693;
+    position: relative;
+  }
+  
+  #booktable {
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #booktable h1 {
+    margin-top: 20px;
+    font-family: 'Rosario', sans-serif;
+  }
+  
+  #form {
+    width: 100%;
+    height: 540px;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  form {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"], input[type="email"], input[type="number"], input[type="text"] {
+    width: 330px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    font-family: 'Rosario', sans-serif;
+    font-size: 15px;
+  }
+  
+  input[type="date"] {
+    width: 330px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding-left: 30px;
+    font-family: 'Rosario', sans-serif;
+    font-size: 15px;
+  }
+  
+  input[type="time"] {
+    font-family: 'Rosario', sans-serif;
+    width: 330px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding-left: 30px;
+    font-size: 15px;
+  }
+  
+  input[type="submit"] {
+    font-family: 'Rosario', sans-serif;
+    width: 330px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    transition: all ease-in-out .2s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+  }
+  
+  form select {
+    font-family: 'Rosario', sans-serif;
+    padding-left: 30px;
+    background-color: #fff;
+    width: 330px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  #back4 {
+    width: 100%;
+    height: 90%;
+    background-color: #fff;
+  }
+  
+  #aboutus {
+    width: 100%;
+    height: 11%;
+  }
+  
+  #aboutus h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #about2 {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #abouts {
+    width: 400px;
+    height: 65%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rosario', sans-serif;
+  }
+  
+  #gallery {
+    width: 330px;
+    height: 80%;
+    overflow: auto;
+    cursor: pointer;
+  }
+  
+  #gallery::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  #gallery img {
+    width: 260px;
+    height: 170px;
+    margin-top: 15px;
+  }
+  
+  #line1 {
+    width: 390px;
+    height: 45px;
+  }
+  
+  #line2 {
+    width: 390px;
+    height: 110px;
+  }
+  
+  #line3 {
+    width: 390px;
+    height: 60px;
+  }
+  
+  .loo {
+    font-size: 14px;
+  }
+  
+  #back5{
+    width: 100%;
+    height: 70%;
+    background-color: black;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+  }
+  
+  #name5{
+    width: 100%;
+    height: 18%;
+  }
+  
+  #name5 h1{
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Rosario', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  
+  #location{
+    width: 100%;
+    height: 40%;
+  }
+  
+  #location p{
+    text-align: center;
+  }
+  
+  #p11{
+    font-size: 26px;
+    padding-top: 10px;
+  }
+  
+  #p12{
+    font-size: 15px;
+    padding-top: 10px;
+    font-weight: 500;
+  }
+  
+  #p13{
+    font-size: 18px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+  
+  #p14{
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+  }
+  
+  #p15{
+    letter-spacing: 1px;
+  }
+  
+  #follow{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #p16{
+      font-size: 23px;
+  }
+  
+  #fb{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+  }
+  
+  #fb i{
+    color: #fff;
+  }
+  
+  footer{
+    height: 40px;
+    background-color: #ffdf76;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Rosario', sans-serif;
+    word-spacing: 1px;
+  }
+  
+  footer p i{
+    color: red;
+  }
+  
+  @media (max-width: 640px) and (orientation: landscape) {
+    #back5{
+      width: 100%;
+      height: 150%;
+    }
+    #back4 {
+      width: 100%;
+      height: 220%;
+    }
+    #gallery {
+      width: 330px;
+      height: 75%;
+    }
+    #back2 {
+      height: 320vh;
+    }
+    #back3 {
+      width: 100%;
+      height: 270%;
+      position: relative;
+    }
+    #cross {
+      position: absolute;
+      right: -3.6%;
+      top: -6%;
+    }
+    #boy {
+      display: none;
+    }
+    #nav {
+      height: 13%;
+    }
+    #patti {
+      position: absolute;
+      background-color: #ffeaa7;
+      width: 100%;
+      height: 75%;
+      display: none;
+    }
+    #book {
+      width: 400px;
+      min-height: 110vh;
+    }
+    #back {
+      width: 100%;
+      height: 185%;
+      background-image: url('../images/rest1.jpg');
+      background-size: cover;
+    }
+    #overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75)
+    }
+    #button {
+      width: 100%;
+      min-height: 13vh;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #abouts {
+      width: 380px;
+      height: 50%;
+    }
+    #aboutus h1 {
+      padding-top: 23px;
+      font-size: 25px;
+    }
+    #gallery {
+      width: 355px;
+      height: 48%;
+    }
+    #about2 {
+      flex-direction: column;
+    }
+    #line1 {
+      width: 350px;
+      padding-top: 7px;
+    }
+    #line2 {
+      width: 350px;
+      padding-top: 10px;
+    }
+    #line3 {
+      width: 350px;
+      padding-top: 8px;
+    }
+    .loo {
+      font-size: 12px;
+    }
+    #logo {
+      width: 60%;
+      height: 100%;
+    }
+    #nav1 {
+      display: none;
+    }
+    #welcome {
+      margin-top: 50px;
+      font-size: 36px;
+    }
+    #raja {
+      font-size: 40px;
+      letter-spacing: 3px;
+      margin-top: -5px;
+    }
+    #book {
+      width: 320px;
+      min-height: 65vh;
+    }
+    #hamburger {
+      width: 40%;
+      height: 100%;
+      background-color: #ffeaa7;
+      display: block;
+    }
+    #logo h1 {
+      font-size: 24px;
+      margin: 13px 0 0 30px;
+    }
+    #logo p {
+      font-size: 13px;
+      margin: 5px 0 0 70px;
+    }
+    #patti {
+      display: none;
+    }
+    #menuicon {
+      width: 100%;
+      height: 10%;
+    }
+    #menulist {
+      width: 100%;
+      min-height: 970px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+    #menuicon h1 {
+      font-size: 25px;
+    }
+    #food h1 {
+      font-size: 19px;
+    }
+    #drink h1 {
+      font-size: 19px;
+    }
+    #food {
+      width: 330px;
+      height: 450px;
+    }
+    #food hr {
+      width: 190px;
+      display: flex;
+      margin: 20px 0 0 72px;
+      border-style: dashed;
+    }
+    #drink hr {
+      width: 190px;
+      display: flex;
+      margin: 20px 0 0 72px;
+      border-style: dashed;
+    }
+    #veg {
+      margin-top: 5px;
+      margin-left: 210px;
+    }
+    #drink {
+      width: 330px;
+      height: 450px;
+    }
+    #popup {
+      width: 75%;
+      height: 65%;
+    }
+    #boy {
+      margin-top: 40px;
+    }
+    #popup h1 {
+      font-size: 23px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    #popup h6 {
+      margin-top: 45px;
+    }
+    #booktable h1 {
+      line-height: 40px;
+      font-size: 22px;
+    }
+    #booktable {
+      height: 11%;
+    }
+    #form {
+      width: 100%;
+      height: 530px;
+      top: 55%;
+      left: 50%;
+    }
+    #gallery img {
+      width: 240px;
+      height: 140px;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    #gallery {
+      padding: 30px;
+    }
+    input[type="text"], input[type="email"], input[type="number"], input[type="text"] {
+      width: 250px;
+      height: 38px;
+    }
+    input[type="date"] {
+      width: 250px;
+      height: 38px;
+    }
+    input[type="time"] {
+      width: 250px;
+      height: 38px;
+    }
+    input[type="submit"] {
+      width: 250px;
+      height: 38px;
+    }
+    form select {
+      width: 250px;
+      height: 38px;
+    }
+    
+    #p11{
+      font-size: 17px;
+      padding-top: 20px;
+    }
+    
+    #p12{
+      font-size: 12px;
+      padding-top: 5px;
+      font-weight: 500;
+    }
+    
+    #p13{
+      font-size: 15px;
+      padding-top: 35px;
+      padding-bottom: 40px;
+    }
+  
+    #p14{
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+  
+    #p15{
+      font-size: 14px;
+    }
+  
+  
+    #p16{
+      font-size: 15px;
+  }
+  
+  #fb{
+    font-size: 16px;
+  }
+  
+  
+  }
